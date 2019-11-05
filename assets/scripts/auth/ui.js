@@ -38,6 +38,16 @@ const onSignInFailure = function () {
   failureMessage('Oh no! Sign In is incorrect. Please try again!')
 }
 
+// Change password
+const onChangePasswordSuccess = function () {
+  successMessage('Changed password successfully!')
+}
+
+// Change password
+const onChangePasswordFailure = function () {
+  failureMessage('Password change failed.')
+}
+
 // SIGN OUT
 const onSignOutSuccess = function () {
   successMessage(`Goodbye! Come back soon!`)
@@ -52,6 +62,8 @@ module.exports = {
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
+  onChangePasswordSuccess,
+  onChangePasswordFailure,
   onSignOutSuccess,
   onSignOutFailure
 }
