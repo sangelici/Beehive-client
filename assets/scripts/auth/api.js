@@ -3,6 +3,13 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
+const signUp = function (formData) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/sign-up'
+  })
+}
+
 const signIn = function (formData) {
   return $.ajax({
     method: 'POST',
@@ -22,6 +29,7 @@ const signOut = function () {
 }
 
 module.exports = {
+  signUp,
   signIn,
   signOut
 }
