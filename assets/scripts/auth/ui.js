@@ -1,6 +1,5 @@
 'use strict'
 
-<<<<<<< HEAD
 const store = require('../store')
 
 const successMessage = function (newText) {
