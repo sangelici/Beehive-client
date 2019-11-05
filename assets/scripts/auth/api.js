@@ -36,6 +36,8 @@ const signOut = function () {
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
+  })
+}
 
 module.exports = {
   signUp,
