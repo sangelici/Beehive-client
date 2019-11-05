@@ -4,9 +4,11 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const signUp = function (formData) {
+  // console.log(formData)
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/sign-up'
+    url: config.apiUrl + '/sign-up',
+    data: formData
   })
 }
 
