@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Beehive</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,17 +11,35 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
       <h1>Beehive</h1>
 
       <div class= 'sign-up'>
-          <form id='sign-up'>
-            <h1>sign-up</h1>
-            <input type="email" name="credentials[email]" placeholder='Enter email..'>
-            <input type="password" name="credentials[password]" placeholder='password'>
-            <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
-            <button type="submit">sign up</button>
-          </form>
+        <form id='sign-up'>
+          <h1>sign-up</h1>
+          <input type="email" name="credentials[email]" placeholder='Enter email..'>
+          <input type="password" name="credentials[password]" placeholder='password'>
+          <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
+          <button type="submit">sign up</button>
+        </form>
+      </div>
+
+      <div class="sign-in">
+        <form id="sign-in">
+          <fieldset>
+            <legend>Sign in!</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign in!">
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="sign-out">
+        <form id="sign-out">
+          <button>Sign Out</button>
+        </form>
       </div>
 
     </body>
