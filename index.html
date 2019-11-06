@@ -19,14 +19,12 @@
       <div class="col-12">
         <h1 class="main-header">Beehive</h1>
         <p class="catchphrase">Discover what the buzz is all about!</p>
-      </div>
-
-      <div class="col-12">
-        <div class="message"></div>
+        <div class="catchphrase message"></div>
       </div>
 
       <div class="col-4">
         <div class="form-structor">
+          <div class="landing">
           <div class='sign-up signup'>
             <h2 class="form-title1" id="signup">Sign up</h2>
             <form class="form-holder" id='sign-up'>
@@ -43,66 +41,99 @@
             <div class="center">
               <h2 class="form-title2" id="login">Log in</h2>
               <form class="form-holder" id="sign-in">
-                <fieldset>
-                  <!-- <legend>Sign in!</legend> -->
                   <input type="text" name="credentials[email]" placeholder="Email">
                   <input type="password" name="credentials[password]" placeholder="Password">
-                </fieldset>
+                <button class="submit-btn">Log in</button>
               </form>
-              <button class="submit-btn">Log in</button>
 
               <button class="show-signup">Sign up!</button>
             </div>
+            </div>
+          </div>
+          <div class="nav">
+            <ul class="links">
+              <li><button class="link profile">Profile</button></li>
+              <li><button class="link find-listing">Find Event</button></li>
+              <li><button class="link create-listing">Create Event</button></li>
+              <li><button class="link change-pw">Change Password</button></li>
+              <li>
+                <div class="sign-out">
+                  <form id="sign-out">
+                    <button>Sign Out</button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+
           </div>
         </div>
       </div>
 
       <div class="col-8 public-listings">
-        <p> ofewibuwebuofwe </p>
-      </div>
 
-      <div class="change-password">
-        <form id="change-password">
-          <legend>Change Password</legend>
-          <input type="password" name="passwords[old]" placeholder='Enter old password'>
-          <input type="password" name="passwords[new]" placeholder='Enter new password'>
-          <button>Change Password</button>
-        </form>
-      </div>
+        <div id="find-listing">
+          <div class="index">
+            <form id="index">
+              <legend>Index of Listings</legend>
+              <button>Index Listings</button>
+            </form>
+          </div>
+        </div>
 
-      <div class="sign-out">
-        <form id="sign-out">
-          <button>Sign Out</button>
-        </form>
-      </div>
-      <br>
+        <div class="homepage">
+          <div id="profile">
+            <div class="user-index">
+              <form id="user-index">
+                <legend>Index of user-Listings</legend>
+                <button>Index user-Listings</button>
+              </form>
+            </div>
+
+            <div class="rsvp-index">
+              <form id="rsvp-index">
+                <legend>Index of user-rsvps</legend>
+                <button>Index user-rsvps</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="create-listing">
+            <div class="new-listing">
+              <form id="new-listing">
+                <legend>Create Listing</legend>
+                <input required type="text" name="listing[listing_name]" placeholder="Enter listing...">
+                <input required type="text" name="listing[location]" placeholder="Enter Location">
+                <input required type="date" name="listing[date]" placeholder="Enter Date">
+                <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
+                <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
+                <input required type="text" name="listing[description]" placeholder="Enter Description">
+                <button class="button">Submit Listing</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="change-pw">
+            <div class="change-password">
+              <form id="change-password">
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" placeholder='Enter old password'>
+                <input type="password" name="passwords[new]" placeholder='Enter new password'>
+                <button>Change Password</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- COL 8 -->
+
+
+
       <section class="listings">
-        <div>
-          <form id="index">
-            <legend>Index of Listings</legend>
-            <button>Index Listings</button>
-          </form>
-        </div>
-        <br>
-        <div>
-          <form id="user-index">
-            <legend>Index of user-Listings</legend>
-            <button>Index user-Listings</button>
-          </form>
-        </div>
 
-        <div class="new-listing">
-          <form id="new-listing">
-            <legend>Create Listing</legend>
-            <input required type="text" name="listing[listing_name]" placeholder="Enter listing...">
-            <input required type="text" name="listing[location]" placeholder="Enter Location">
-            <input required type="date" name="listing[date]" placeholder="Enter Date">
-            <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
-            <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
-            <input required type="text" name="listing[description]" placeholder="Enter Description">
-            <button class="button">Submit Listing</button>
-          </form>
-        </div>
+        <br>
+
+
+
 
         <div class="show-listing">
           <form id="show-listing">
@@ -142,12 +173,7 @@
           </form>
         </div>
         <br>
-        <div>
-          <form id="rsvp-index">
-            <legend>Index of user-rsvps</legend>
-            <button>Index user-rsvps</button>
-          </form>
-        </div>
+
 
         <div>
           <form id="delete-rsvp">

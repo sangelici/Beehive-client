@@ -32,6 +32,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage(`You're signed in!`)
   store.user = responseData.user
+  homepage()
 }
 
 const onSignInFailure = function () {
@@ -51,10 +52,27 @@ const onChangePasswordFailure = function () {
 // SIGN OUT
 const onSignOutSuccess = function () {
   successMessage(`Goodbye! Come back soon!`)
+  landing()
 }
 
 const onSignOutFailure = function () {
   failureMessage(`Sign out failed. Please try again!`)
+}
+
+const homepage = function () {
+  $('.landing').hide()
+  $('.nav').show()
+  $('.sign-out').show()
+  $('.homepage').show()
+  $('#change-pw').hide()
+}
+
+const landing = function () {
+  $('.landing').show()
+  $('#find-listing').show()
+  $('.nav').hide()
+  $('.homepage').hide()
+  $('.sign-out').hide()
 }
 
 module.exports = {
