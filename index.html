@@ -52,6 +52,88 @@
           <button>Sign Out</button>
         </form>
       </div>
+      <br>
+      <section id="listings">
+      <div>
+        <form id="index">
+          <legend>Index of Listings</legend>
+          <button>Index Listings</button>
+        </form>
+      </div>
+      <br>
+      <div>
+        <form id="user-index">
+          <legend>Index of user-Listings</legend>
+          <button>Index user-Listings</button>
+        </form>
+      </div>
+
+    <div>
+      <form id="new-listing">
+        <legend>Create Listing</legend>
+        <input required type="text" name="listing[listing_name]" placeholder="Enter listing...">
+        <input required type="text" name="listing[location]" placeholder="Enter Location">
+        <input required type="date" name="listing[date]" placeholder="Enter Date">
+        <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
+        <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
+        <input required type="text" name="listing[description]" placeholder="Enter Description">
+        <button class="button">Submit Listing</button>
+      </form>
+    </div>
+
+    <div>
+      <form id="show-listing">
+        <legend>Show A Listing</legend>
+        <input id="find-listing" required type="text" name="listing[id]" placeholder="Enter Listing ID...">
+        <button class="button">Show A Listing</button>
+      </form>
+    </div>
+
+    <div>
+      <form id="update-listing">
+        <legend>Update A Listing</legend>
+        <input required value=listing[id] id="listing-id" type="text" name="listing[id]" placeholder="Enter listing id...">
+        <input  id="listing-name" type="text" name="listing[listing_name]" placeholder="Enter listing name...">
+        <input  id="listing-location" type="text" name="listing[location]" placeholder="Enter Location...">
+        <input  id="listing-description" type="text" name="listing[description]" placeholder="Enter Description...">
+        <button class="button">Update Listing</button>
+      </form>
+    </div>
+<br>
+
+    <div>
+      <form id="delete-listing">
+        <legend>Destroy Listing</legend>
+        <input id="destroy-listing" required type="text" name="listing[id]" placeholder="Enter listing ID...">
+        <button>Destroy Listing</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="rsvps">
+    <div>
+      <form class="create-rsvp">
+        <legend>Create rsvp</legend>
+        <input id="create-rsvp" required type="text" name="rsvp[listing]" placeholder="Enter rsvp ID...">
+        <button>Create rsvp</button>
+      </form>
+    </div>
+<br>
+    <div>
+      <form id="rsvp-index">
+        <legend>Index of user-rsvps</legend>
+        <button>Index user-rsvps</button>
+      </form>
+    </div>
+
+    <div>
+      <form id="delete-rsvp">
+        <legend>Destroy Rsvp</legend>
+        <input id="destroy-rsvp" required type="text" name="rsvp[id]" placeholder="Enter rsvp ID...">
+        <button>Destroy Rsvp</button>
+      </form>
+    </div>
+  </section>
 
     </body>
 </html>
