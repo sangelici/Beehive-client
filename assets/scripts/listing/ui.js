@@ -53,8 +53,10 @@ const onUpdateFailure = function () {
 
 const onGetListingsSuccess = (data) => {
   // console.log(‘get data is ‘, data)
+  $('#index').hide()
   const showListingsHTML = showListings({listings: data.listings})
-  $(`.listing-index`).html(showListingsHTML)
+  $('.listing-index').html('')
+  $('.listing-index').html(showListingsHTML)
 }
 
 const onGetListingsFailure = function () {
