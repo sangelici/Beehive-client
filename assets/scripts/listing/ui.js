@@ -2,6 +2,7 @@
 
 const store = require('../store')
 const showListings = require('../templates/all-listing.handlebars')
+const oneListing = require('../templates/show-listing.handlebars');
 
 const successMessage = function (newText) {
   $('.message').text(newText)
@@ -31,6 +32,7 @@ const onCreateListingFailure = function () {
 const onShowListingSuccess = function (data) {
   console.log(data.listing)
   successMessage('What a stupendous listing! ' + data.listing.listing_name)
+  $('.listing-show').html(oneListing(event))
 }
 
 const onShowListingFailure = function () {
@@ -53,7 +55,6 @@ const onUpdateFailure = function () {
 
 const onGetListingsSuccess = (data) => {
   // console.log(‘get data is ‘, data)
-  $('#index').hide()
   const showListingsHTML = showListings({listings: data.listings})
   $('.listing-index').html('')
   $('.listing-index').html(showListingsHTML)
