@@ -64,9 +64,11 @@ const onGetListingsFailure = function () {
   failureMessage('Sorry, something went wrong. Please try again.')
 }
 
-const onGetUserListingsSuccess = function (data) {
+const onGetUserListingsSuccess = (data) => {
   console.log(data)
-  successMessage('Here are your listings ')
+  successMessage('Here are your listings!')
+  const showListingsHTML = showListings({listings: data.listings})
+  $(`.listing-index`).html(showListingsHTML)
 }
 
 const onGetUserListingsFailure = function () {
