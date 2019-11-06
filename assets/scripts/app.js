@@ -20,7 +20,7 @@ $(() => {
   $('#index').on('submit', listingEvents.onGetListings)
   $('#user-index').on('submit', listingEvents.onGetUserListings)
   $('#delete-listing').on('submit', listingEvents.onDeleteListing)
-  $('#create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
+  $('.create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
   $('#rsvp-index').on('submit', rsvpEvents.onIndexRsvp)
   $('#delete-rsvp').on('submit', rsvpEvents.onDeleteRsvp)
 
