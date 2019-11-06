@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Beehive</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Beehive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-    <body>
-      <h1>Beehive</h1>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <div class="message"></div>
-
-      <div class= 'sign-up'>
-        <form id='sign-up'>
-          <legend>Sign-up</legend>
-          <input type="email" name="credentials[email]" placeholder='Enter email..'>
-          <input type="password" name="credentials[password]" placeholder='password'>
-          <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
-          <button type="submit">sign up</button>
-        </form>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="main-header">Beehive</h1>
+        <p class="catchphrase">Discover what the buzz is all about!</p>
       </div>
 
-      <div class="sign-in">
-        <form id="sign-in">
-          <fieldset>
-            <legend>Sign in!</legend>
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" value="Sign in!">
-          </fieldset>
-        </form>
+      <div class="col-12">
+        <div class="message"></div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-structor">
+          <div class='sign-up signup'>
+            <h2 class="form-title1" id="signup">Sign up</h2>
+            <form class="form-holder" id='sign-up'>
+              <!-- <legend>Sign-up</legend> -->
+              <input type="email" name="credentials[email]" placeholder='Enter email..'>
+              <input type="password" name="credentials[password]" placeholder='Enter password...'>
+              <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password...'>
+              <button class="submit-btn">Sign up</button>
+            </form>
+            <button class="show-login">Log In!</button>
+          </div>
+
+          <div class="sign-in login">
+            <div class="center">
+              <h2 class="form-title2" id="login">Log in</h2>
+              <form class="form-holder" id="sign-in">
+                <fieldset>
+                  <!-- <legend>Sign in!</legend> -->
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                </fieldset>
+              </form>
+              <button class="submit-btn">Log in</button>
+
+              <button class="show-signup">Sign up!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 public-listings">
+        <p> ofewibuwebuofwe </p>
       </div>
 
       <div class="change-password">
@@ -53,87 +76,91 @@
         </form>
       </div>
       <br>
-      <section id="listings">
-      <div>
-        <form id="index">
-          <legend>Index of Listings</legend>
-          <button>Index Listings</button>
-        </form>
-      </div>
-      <br>
-      <div>
-        <form id="user-index">
-          <legend>Index of user-Listings</legend>
-          <button>Index user-Listings</button>
-        </form>
-      </div>
+      <section class="listings">
+        <div>
+          <form id="index">
+            <legend>Index of Listings</legend>
+            <button>Index Listings</button>
+          </form>
+        </div>
+        <br>
+        <div>
+          <form id="user-index">
+            <legend>Index of user-Listings</legend>
+            <button>Index user-Listings</button>
+          </form>
+        </div>
 
-    <div>
-      <form id="new-listing">
-        <legend>Create Listing</legend>
-        <input required type="text" name="listing[listing_name]" placeholder="Enter listing...">
-        <input required type="text" name="listing[location]" placeholder="Enter Location">
-        <input required type="date" name="listing[date]" placeholder="Enter Date">
-        <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
-        <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
-        <input required type="text" name="listing[description]" placeholder="Enter Description">
-        <button class="button">Submit Listing</button>
-      </form>
-    </div>
+        <div class="new-listing">
+          <form id="new-listing">
+            <legend>Create Listing</legend>
+            <input required type="text" name="listing[listing_name]" placeholder="Enter listing...">
+            <input required type="text" name="listing[location]" placeholder="Enter Location">
+            <input required type="date" name="listing[date]" placeholder="Enter Date">
+            <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
+            <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
+            <input required type="text" name="listing[description]" placeholder="Enter Description">
+            <button class="button">Submit Listing</button>
+          </form>
+        </div>
 
-    <div>
-      <form id="show-listing">
-        <legend>Show A Listing</legend>
-        <input id="find-listing" required type="text" name="listing[id]" placeholder="Enter Listing ID...">
-        <button class="button">Show A Listing</button>
-      </form>
-    </div>
+        <div class="show-listing">
+          <form id="show-listing">
+            <legend>Show A Listing</legend>
+            <input id="find-listing" required type="text" name="listing[id]" placeholder="Enter Listing ID...">
+            <button class="button">Show A Listing</button>
+          </form>
+        </div>
 
-    <div>
-      <form id="update-listing">
-        <legend>Update A Listing</legend>
-        <input required value=listing[id] id="listing-id" type="text" name="listing[id]" placeholder="Enter listing id...">
-        <input  id="listing-name" type="text" name="listing[listing_name]" placeholder="Enter listing name...">
-        <input  id="listing-location" type="text" name="listing[location]" placeholder="Enter Location...">
-        <input  id="listing-description" type="text" name="listing[description]" placeholder="Enter Description...">
-        <button class="button">Update Listing</button>
-      </form>
-    </div>
-<br>
+        <div class="update-listing">
+          <form id="update-listing">
+            <legend>Update A Listing</legend>
+            <input required value=listing[id] id="listing-id" type="text" name="listing[id]" placeholder="Enter listing id...">
+            <input id="listing-name" type="text" name="listing[listing_name]" placeholder="Enter listing name...">
+            <input id="listing-location" type="text" name="listing[location]" placeholder="Enter Location...">
+            <input id="listing-description" type="text" name="listing[description]" placeholder="Enter Description...">
+            <button class="button">Update Listing</button>
+          </form>
+        </div>
+        <br>
 
-    <div>
-      <form id="delete-listing">
-        <legend>Destroy Listing</legend>
-        <input id="destroy-listing" required type="text" name="listing[id]" placeholder="Enter listing ID...">
-        <button>Destroy Listing</button>
-      </form>
-    </div>
-  </section>
+        <div class="delete-listing">
+          <form id="delete-listing">
+            <legend>Destroy Listing</legend>
+            <input id="destroy-listing" required type="text" name="listing[id]" placeholder="Enter listing ID...">
+            <button>Destroy Listing</button>
+          </form>
+        </div>
+      </section>
 
-  <section id="rsvps">
-    <div>
-      <form class="create-rsvp">
-        <legend>Create rsvp</legend>
-        <input id="create-rsvp" required type="text" name="rsvp[listing]" placeholder="Enter rsvp ID...">
-        <button>Create rsvp</button>
-      </form>
-    </div>
-<br>
-    <div>
-      <form id="rsvp-index">
-        <legend>Index of user-rsvps</legend>
-        <button>Index user-rsvps</button>
-      </form>
-    </div>
+      <section class="rsvps">
+        <div>
+          <form id="create-rsvp">
+            <legend>Create rsvp</legend>
+            <input id="create-rsvp" required type="text" name="rsvp[listing]" placeholder="Enter rsvp ID...">
+            <button>Create rsvp</button>
+          </form>
+        </div>
+        <br>
+        <div>
+          <form id="rsvp-index">
+            <legend>Index of user-rsvps</legend>
+            <button>Index user-rsvps</button>
+          </form>
+        </div>
 
-    <div>
-      <form id="delete-rsvp">
-        <legend>Destroy Rsvp</legend>
-        <input id="destroy-rsvp" required type="text" name="rsvp[id]" placeholder="Enter rsvp ID...">
-        <button>Destroy Rsvp</button>
-      </form>
-    </div>
-  </section>
+        <div>
+          <form id="delete-rsvp">
+            <legend>Destroy Rsvp</legend>
+            <input id="destroy-rsvp" required type="text" name="rsvp[id]" placeholder="Enter rsvp ID...">
+            <button>Destroy Rsvp</button>
+          </form>
+        </div>
+      </section>
 
-    </body>
+    </div> <!-- class row -->
+  </div> <!-- class container-->
+
+</body>
+
 </html>

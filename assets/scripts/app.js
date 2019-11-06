@@ -20,7 +20,23 @@ $(() => {
   $('#index').on('submit', listingEvents.onGetListings)
   $('#user-index').on('submit', listingEvents.onGetUserListings)
   $('#delete-listing').on('submit', listingEvents.onDeleteListing)
-  $('.create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
+  $('#create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
   $('#rsvp-index').on('submit', rsvpEvents.onIndexRsvp)
   $('#delete-rsvp').on('submit', rsvpEvents.onDeleteRsvp)
+
+  // REGISTER/LOGIN MODAL
+  $('.show-login').on('click', () => {
+    $('#sign-up').hide()
+    $('.login').show()
+  })
+  $('.show-signup').on('click', () => {
+    $('.login').hide()
+    $('#sign-up').show()
+  })
+
+  // HIDING
+  $('.change-password').hide()
+  $('.sign-out').hide()
+  $('.listings').hide()
+  $('.rsvps').hide()
 })
