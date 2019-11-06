@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const showListings = require('../templates/all-listing.handlebars')
 
 const successMessage = function (newText) {
   $('.message').text(newText)
@@ -45,9 +46,15 @@ const onUpdateFailure = function () {
   failureMessage('Sorry, something went wrong. Please try again.')
 }
 
-const onGetListingsSuccess = function (data) {
-  console.log(data)
-  successMessage('Here are your listings ')
+// const onGetListingsSuccess = function (data) {
+//   console.log(data)
+//   successMessage('Here are your listings ')
+// }
+
+const onGetListingsSuccess = (data) => {
+  // console.log(‘get data is ‘, data)
+  const showListingsHTML = showListings({listings: data.listings})
+  $(`.listings`).html(showListingsHTML)
 }
 
 const onGetListingsFailure = function () {

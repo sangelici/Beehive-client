@@ -1,0 +1,12 @@
+{{#each listings as |listing|}}
+{{log listing}}
+<section class= listings>
+<h4>Rsvp {{listing.id}} </h4>
+ <p>Event_name:{{listing.listing_name}}</p>
+ <p>Description:{{listing.description}}</p>
+ <p>Date:{{listing.date}}</p>
+ <p>Start_time:{{listing.start_time}}</p>
+ <p>End_time:{{listing.end_time}}</p>
+ <p>Location:{{listing.location}}</p>
+</section>
+{{/each}}
