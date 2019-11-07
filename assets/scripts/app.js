@@ -104,5 +104,4 @@ $(() => {
   $('#profile').hide()
   $('#create-listing').hide()
   $('#find-user-listing').hide()
-
 })
