@@ -31,6 +31,7 @@ $(() => {
     $('#find-listing').hide()
     $('#create-listing').hide()
     $('#change-pw').hide()
+    $('.listing-index').hide()
   })
   $('#user-index').on('submit', listingEvents.onGetUserListings)
   $('#rsvp-index').on('submit', rsvpEvents.onIndexRsvp)
@@ -41,9 +42,15 @@ $(() => {
     $('#profile').hide()
     $('#find-listing').hide()
     $('#change-pw').hide()
+    $('.listing-index').hide()
   })
   $('#new-listing').on('submit', listingEvents.onCreateListing)
 
+  // INDEX LISTINGS
+  $('.find-listing').on('click', () => {
+    $('.listing-index').show()
+
+  })
   // CHANGE PASSWORD
   $('.change-pw').on('click', () => {
     $('#change-pw').show()
@@ -69,6 +76,7 @@ $(() => {
     $('.login').hide()
     $('#sign-up').show()
   })
+  $('.listing-index').show()
 
   // HIDING
   $('.nav').hide()

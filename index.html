@@ -17,7 +17,10 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="main-header">Beehive</h1>
+        <h1 class="main-header">
+          BEEHIVE
+          <img src='./public/logo.png'/>
+        </h1>
         <p class="catchphrase">Discover what the buzz is all about!</p>
         <div class="catchphrase message"></div>
       </div>
@@ -45,13 +48,14 @@
                   <input type="password" name="credentials[password]" placeholder="Password">
                 <button class="submit-btn">Log in</button>
               </form>
-
               <button class="show-signup">Sign up!</button>
             </div>
             </div>
           </div>
+
           <div class="nav">
             <ul class="links">
+              <li><img src="./public/beehive.png"/></li>
               <li><button class="link profile">Profile</button></li>
               <li><button class="link find-listing">Find Event</button></li>
               <li><button class="link create-listing">Create Event</button></li>
@@ -59,7 +63,7 @@
               <li>
                 <div class="sign-out">
                   <form id="sign-out">
-                    <button>Sign Out</button>
+                    <button class="link">Sign Out</button>
                   </form>
                 </div>
               </li>
@@ -74,11 +78,13 @@
         <div id="find-listing">
           <div class="index">
             <form id="index">
-              <legend>Index of Listings</legend>
-              <button>Index Listings</button>
+              <legend>Events</legend>
+              <button>Show all</button>
             </form>
           </div>
         </div>
+
+        <div class="listing-index overflow-auto"></div>
 
         <!-- <div class="show-listing">
           <form id="show-listing">
@@ -102,7 +108,7 @@
                 <button>Index user-rsvps</button>
               </form>
             </div>
-          </div>
+        </div>
 
           <div id="create-listing">
             <div class="new-listing">
@@ -131,7 +137,7 @@
           </div>
         </div>
 
-        <div class="listing-index overflow-auto"></div>
+
         <div class="listing-show"></div>
 
       </div> <!-- COL 8 -->

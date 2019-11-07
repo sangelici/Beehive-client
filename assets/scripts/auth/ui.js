@@ -7,14 +7,14 @@ const successMessage = function (newText) {
   $('.message').removeClass('failure')
   $('.message').addClass('success')
   $('form').trigger('reset')
-  // setTimeout(function () { successMessage('') }, 4000)
+  setTimeout(function () { successMessage('') }, 4000)
 }
 
 const failureMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('success')
   $('.message').addClass('failure')
-  // setTimeout(function () { failureMessage('') }, 4000)
+  setTimeout(function () { failureMessage('') }, 4000)
 }
 
 // SIGN UP
