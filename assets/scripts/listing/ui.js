@@ -2,27 +2,27 @@
 
 const store = require('../store')
 const showListings = require('../templates/all-listing.handlebars')
-const oneListing = require('../templates/show-listing.handlebars');
+const oneListing = require('../templates/show-listing.handlebars')
+const showAuthListings = require('../templates/signed-in-listings.handlebars')
 
 const successMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('failure')
   $('.message').addClass('success')
-  $('form').trigger('reset')
-  // setTimeout(function () { successMessage('') }, 4000)
+  // $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('success')
   $('.message').addClass('failure')
-  // setTimeout(function () { failureMessage('') }, 4000)
 }
 
 const onCreateListingSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   store.listing = data.listing
   successMessage('Yay, onCreateListing worked! ' + data.listing.listing_name)
+  $('form').trigger('reset')
 }
 
 const onCreateListingFailure = function () {
@@ -30,9 +30,13 @@ const onCreateListingFailure = function () {
 }
 
 const onShowListingSuccess = function (data) {
-  console.log(data.listing)
+  // console.log(data.listing)
   successMessage('What a stupendous listing! ' + data.listing.listing_name)
-  $('.listing-show').html(oneListing(event))
+  // $('.listing-show').html(oneListing(event))
+  const oneListingHTML = oneListing({listing: data.listing})
+  $('.listing-index').html('')
+  $('.listing-index').html(oneListingHTML)
+  $('.create-rsvp').show()
 }
 
 const onShowListingFailure = function () {
@@ -61,6 +65,17 @@ const onGetListingsSuccess = (data) => {
 }
 
 const onGetListingsFailure = function () {
+  failureMessage('Sorry, something went wrong. Please try again.')
+}
+
+const onGetAuthListingsSuccess = (data) => {
+  // console.log(‘get data is ‘, data)
+  const showAuthListingsHTML = showAuthListings({listings: data.listings})
+  $('.listing-index').html('')
+  $('.listing-index').html(showAuthListingsHTML)
+}
+
+const onGetAuthListingsFailure = function () {
   failureMessage('Sorry, something went wrong. Please try again.')
 }
 
@@ -95,5 +110,7 @@ module.exports = {
   onDeleteListingSuccess,
   onDeleteListingFailure,
   onGetUserListingsSuccess,
-  onGetUserListingsFailure
+  onGetUserListingsFailure,
+  onGetAuthListingsSuccess,
+  onGetAuthListingsFailure
 }

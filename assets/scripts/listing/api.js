@@ -48,6 +48,13 @@ const getListings = function () {
   })
 }
 
+const getAuthListings = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/listings/'
+  })
+}
+
 const getUserListings = function () {
   return $.ajax({
     method: 'GET',
@@ -74,5 +81,6 @@ module.exports = {
   updateListing,
   getListings,
   deleteListing,
-  getUserListings
+  getUserListings,
+  getAuthListings
 }

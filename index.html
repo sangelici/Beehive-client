@@ -84,7 +84,17 @@
           </div>
         </div>
 
-        <div class="listing-index overflow-auto"></div>
+        <div id="find-user-listing">
+          <div class="index">
+            <form id="index-auth">
+              <legend>Events</legend>
+              <button>Show auth events</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="work work2 listing-index overflow-auto"></div>
+        <!-- <div class=" rsvp-index overflow-auto"></div> -->
 
         <!-- <div class="show-listing">
           <form id="show-listing">
@@ -147,7 +157,7 @@
         <div class="update-listing">
           <form id="update-listing">
             <legend>Update A Listing</legend>
-            <input required value=listing[id] id="listing-id" type="text" name="listing[id]" placeholder="Enter listing id...">
+            <input required id="listing-id" type="text" name="listing[id]" placeholder="Enter listing id...">
             <input id="listing-name" type="text" name="listing[listing_name]" placeholder="Enter listing name...">
             <input id="listing-location" type="text" name="listing[location]" placeholder="Enter Location...">
             <input id="listing-description" type="text" name="listing[description]" placeholder="Enter Description...">
@@ -175,14 +185,13 @@
         </div>
         <br>
 
-
-        <div>
+        <!-- <div>
           <form id="delete-rsvp">
             <legend>Destroy Rsvp</legend>
             <input id="destroy-rsvp" required type="text" name="rsvp[id]" placeholder="Enter rsvp ID...">
             <button>Destroy Rsvp</button>
           </form>
-        </div>
+        </div> -->
       </section>
 
     </div> <!-- class row -->

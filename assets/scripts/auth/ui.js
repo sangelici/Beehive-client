@@ -6,21 +6,22 @@ const successMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('failure')
   $('.message').addClass('success')
-  $('form').trigger('reset')
-  setTimeout(function () { successMessage('') }, 4000)
+  // $('form').trigger('reset')
+  // setTimeout(function () { successMessage('') }, 4000)
 }
 
 const failureMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('success')
   $('.message').addClass('failure')
-  setTimeout(function () { failureMessage('') }, 4000)
+  // setTimeout(function () { failureMessage('') }, 4000)
 }
 
 // SIGN UP
 const onSignUpSuccess = function () {
   successMessage('signed up successfully!')
   $('#sign-up').trigger('reset')
+  $('form').trigger('reset')
 }
 
 const onSignUpFailure = function () {
@@ -33,6 +34,8 @@ const onSignInSuccess = function (responseData) {
   successMessage(`You're signed in!`)
   store.user = responseData.user
   homepage()
+  $('.listing-index').html('')
+  $('#find-listing').hide()
 }
 
 const onSignInFailure = function () {
@@ -42,6 +45,7 @@ const onSignInFailure = function () {
 // Change password
 const onChangePasswordSuccess = function () {
   successMessage('Changed password successfully!')
+  $('form').trigger('reset')
 }
 
 // Change password
@@ -53,6 +57,9 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = function () {
   successMessage(`Goodbye! Come back soon!`)
   landing()
+  $('.listing-index').html('')
+  $('#find-listing').show()
+  $('#find-user-listing').hide()
 }
 
 const onSignOutFailure = function () {
@@ -65,6 +72,7 @@ const homepage = function () {
   $('.sign-out').show()
   $('.homepage').show()
   $('#change-pw').hide()
+  $('#find-user-listing').show()
 }
 
 const landing = function () {
@@ -73,6 +81,7 @@ const landing = function () {
   $('.nav').hide()
   $('.homepage').hide()
   $('.sign-out').hide()
+  $('#find-user-listing').hide()
 }
 
 module.exports = {

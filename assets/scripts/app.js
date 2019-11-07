@@ -22,8 +22,10 @@ $(() => {
     $('#profile').hide()
     $('#create-listing').hide()
     $('#change-pw').hide()
+    $('.listing-index').html('')
   })
   $('#index').on('submit', listingEvents.onGetListings)
+  $('#index-auth').on('submit', listingEvents.onGetAuthListings)
 
   // PROFILE
   $('.profile').on('click', () => {
@@ -31,7 +33,9 @@ $(() => {
     $('#find-listing').hide()
     $('#create-listing').hide()
     $('#change-pw').hide()
-    $('.listing-index').hide()
+    $('.listing-index').html('')
+    $('.listing-index').show()
+    $('#find-user-listing').hide()
   })
   $('#user-index').on('submit', listingEvents.onGetUserListings)
   $('#rsvp-index').on('submit', rsvpEvents.onIndexRsvp)
@@ -42,14 +46,21 @@ $(() => {
     $('#profile').hide()
     $('#find-listing').hide()
     $('#change-pw').hide()
+    $('.listing-index').html('')
     $('.listing-index').hide()
+    $('#find-user-listing').hide()
   })
+
+  // SHOW LISTING
+  $('rsvps').show()
   $('#new-listing').on('submit', listingEvents.onCreateListing)
 
   // INDEX LISTINGS
   $('.find-listing').on('click', () => {
+    $('#find-listing').hide()
+    $('#find-user-listing').show()
+    $('.listing-index').html('')
     $('.listing-index').show()
-
   })
   // CHANGE PASSWORD
   $('.change-pw').on('click', () => {
@@ -57,14 +68,17 @@ $(() => {
     $('#create-listing').hide()
     $('#profile').hide()
     $('#find-listing').hide()
+    $('#find-user-listing').hide()
   })
 
   // SHOW LISTING
-  $('#show-listing').on('submit', listingEvents.onShowListing)
+  $('.work').on('click', '.show-event', listingEvents.onShowListing)
+  // $('#show-listing').on('submit', listingEvents.onShowListing)
   $('#update-listing').on('submit', listingEvents.onUpdateListing)
   $('#delete-listing').on('submit', listingEvents.onDeleteListing)
 
   $('.create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
+  // $('.work2').on('click', '.create-rsvp', rsvpEvents.onCreateRsvp)
   $('#delete-rsvp').on('submit', rsvpEvents.onDeleteRsvp)
 
   // REGISTER/LOGIN MODAL
@@ -72,19 +86,23 @@ $(() => {
     $('#sign-up').hide()
     $('.login').show()
   })
+
   $('.show-signup').on('click', () => {
     $('.login').hide()
     $('#sign-up').show()
   })
+
+  // $('.listing-index').html('')
   $('.listing-index').show()
 
   // HIDING
   $('.nav').hide()
   $('#change-pw').hide()
   $('.sign-out').hide()
-  $('.listings').hide()
+  $('.listings').show()
   $('.homepage').hide()
-  $('.rsvps').hide()
   $('#profile').hide()
   $('#create-listing').hide()
+  $('#find-user-listing').hide()
+
 })
