@@ -62,6 +62,11 @@ body {
 #profile {
   display: inline-flex;
   padding: 10px;
+
+  & .user-index,
+  .rsvp-index {
+      margin: 0 35px;
+    }
 }
 
 // .rsvp-index {
