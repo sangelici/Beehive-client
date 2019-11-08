@@ -114,12 +114,12 @@
             <div class="new-listing">
               <form id="new-listing">
                 <legend>Create Listing</legend>
-                <input required type="text" name="listing[listing_name]" placeholder="Enter listing...">
-                <input required type="text" name="listing[location]" placeholder="Enter Location">
-                <input required type="date" name="listing[date]" placeholder="Enter Date">
+                <input required type="text" name="listing[listing_name]" placeholder="Event name...">
+                <input required type="text" name="listing[location]" placeholder="Enter Location...">
+                <input required type="date" name="listing[date]" placeholder="Enter Date...">
                 <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
                 <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
-                <input required type="text" name="listing[description]" placeholder="Enter Description">
+                <input required type="text" name="listing[description]" placeholder="Enter Description...">
                 <button class="button">Submit Listing</button>
               </form>
             </div>
@@ -152,12 +152,15 @@
               <input required id="listing-id" type="text" name="listing[id]" placeholder="Enter listing id...">
               <input id="listing-name" type="text" name="listing[listing_name]" placeholder="Enter listing name...">
               <input id="listing-location" type="text" name="listing[location]" placeholder="Enter Location...">
+              <input type="time" name="listing[start_time]" placeholder="Enter Start Time...">
+              <input type="time" name="listing[end_time]" placeholder="Enter End Time...">
               <input id="listing-description" type="text" name="listing[description]" placeholder="Enter Description...">
               <button class="button">Update Listing</button>
             </form>
           </div>
+        </div> <!-- COL 12 -->
           <br>
-
+        <div class="col-12 post-patch-delete">
           <div class="delete-listing">
             <form id="delete-listing">
               <legend>Destroy Listing</legend>
@@ -185,7 +188,8 @@
           </form>
         </div> -->
         </section>
-      </div> <!-- COL 12 -->
+      </div>
+
 
     </div> <!-- class row -->
   </div> <!-- class container-->

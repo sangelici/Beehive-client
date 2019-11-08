@@ -34,10 +34,13 @@ const onSignInSuccess = function (responseData) {
   successMessage(`You're signed in!`)
   store.user = responseData.user
   homepage()
+  $('#profile').hide()
+  $('#create-listing').hide()
+  $('#change-pw').hide()
   $('.listing-index').html('')
   $('#find-listing').hide()
   $('.post-patch-delete').show()
-  $('body').css('height', '125vh')
+  $('body').css('height', '130vh')
 }
 
 const onSignInFailure = function () {

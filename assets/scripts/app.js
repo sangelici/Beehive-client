@@ -70,6 +70,7 @@ $(() => {
     $('#profile').hide()
     $('#find-listing').hide()
     $('#find-user-listing').hide()
+    $('.one-listing').hide()
   })
 
   // SHOW LISTING
@@ -101,6 +102,7 @@ $(() => {
   $('#change-pw').hide()
   $('.sign-out').hide()
   $('.listings').show()
+  $('#find-listing').show()
   $('.homepage').hide()
   $('#profile').hide()
   $('#create-listing').hide()
