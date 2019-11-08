@@ -58,6 +58,7 @@ const onUpdateFailure = function () {
 // }
 
 const onGetListingsSuccess = (data) => {
+  $('#find-listing').hide()
   // console.log(‘get data is ‘, data)
   const showListingsHTML = showListings({listings: data.listings})
   $('.listing-index').html('')
