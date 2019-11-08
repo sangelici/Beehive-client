@@ -104,4 +104,5 @@ $(() => {
   $('#profile').hide()
   $('#create-listing').hide()
   $('#find-user-listing').hide()
+  $('.post-patch-delete').hide()
 })
