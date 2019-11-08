@@ -1,11 +1,13 @@
-<h1 class="event-title">RSVP to an Event</h1>
+<h3 class="event-title">Select an event to find out more!</h3>
+<hr>
 
 {{#each listings as |listing|}}
-{{log listing}}
-  <p><a href="" class='show-event' data-id='{{id}}'>
-{{listing_name}}
-{{date}}
-</a>
-</p>
+
+  <p>
+    <a href="" class='show-event' data-id='{{id}}'>
+      {{listing_name}}
+      {{date}}
+    </a>
+  </p>
 
 {{/each}}
