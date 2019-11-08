@@ -1,7 +1,12 @@
+<ol>
 {{#each rsvps as |rsvp|}}
-{{log rsvp}}
-<section class= 'listings'>
-<h4>listing_name: {{rsvp.listing.listing_name}} </h4>
-<h4>Date: {{rsvp.listing.date}} </h4>
-</section>
+
+  <section class= 'listings'>
+    <li>
+      <h6>Event: {{rsvp.listing.listing_name}} </h6>
+      <p>Date: {{rsvp.listing.date}} </p>
+    </li>
+  </section>
+
 {{/each}}
+</ol>

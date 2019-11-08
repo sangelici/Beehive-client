@@ -69,6 +69,7 @@ const onGetListingsFailure = function () {
 }
 
 const onGetAuthListingsSuccess = (data) => {
+  $('#find-user-listing').hide()
   // console.log(‘get data is ‘, data)
   const showAuthListingsHTML = showAuthListings({listings: data.listings})
   $('.listing-index').html('')

@@ -19,6 +19,7 @@ $(() => {
   // LANDING INDEX/FIND LISTING
   $('.find-listing').on('click', () => {
     $('#find-listing').show()
+    $('#find-user-listing').show()
     $('#profile').hide()
     $('#create-listing').hide()
     $('#change-pw').hide()

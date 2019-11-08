@@ -59,11 +59,16 @@ body {
   // margin-left: 13vh;
 }
 
-.rsvp-index {
-  height: 500px;
-  padding: 5px;
-  width: 500px;
+#profile {
+  display: inline-flex;
+  padding: 10px;
 }
+
+// .rsvp-index {
+//   height: 500px;
+//   padding: 5px;
+//   width: 500px;
+// }
 
 .message {
   color: #FF6226;
