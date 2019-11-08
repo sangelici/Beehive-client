@@ -9,20 +9,18 @@ const successMessage = function (newText) {
   $('.message').removeClass('failure')
   $('.message').addClass('success')
   $('form').trigger('reset')
-  // setTimeout(function () { successMessage('') }, 4000)
 }
 
 const failureMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('success')
   $('.message').addClass('failure')
-  // setTimeout(function () { failureMessage('') }, 4000)
 }
 
 const onCreateRsvpSuccess = function (data) {
   console.log(data)
   store.rsvp = data.rsvp
-  successMessage('Yay, onCreateRsvp worked! ' + data.rsvp)
+  successMessage('You\'re now RSVP\'d to: ' + data.rsvp)
   // const oneRsvpHTML = createRsvp({listing: data.listing})
   // $('.listing-index').html('')
   // $('.listing-index').html(oneRsvpHTML)
@@ -36,7 +34,7 @@ const onIndexRsvpSuccess = function (data) {
   store.rsvps = data.rsvps
   console.log(store.user.email)
   console.log(data.rsvps)
-  successMessage('Yay, onIndexRsvp worked! ')
+  successMessage('Your RSVPs')
   const showRsvpsHTML = showRsvps({rsvps: store.rsvps})
   $('.listing-index').html('')
   $('.listing-index').html(showRsvpsHTML)
@@ -54,7 +52,7 @@ const onIndexRsvpFailure = function () {
 }
 
 const onDeleteRsvpSuccess = function () {
-  successMessage('Your quote with Id: ' + store.rsvp_id + ' was destroyed.')
+  successMessage('Rsvp with id: ' + store.rsvp_id + ' was destroyed.')
 }
 
 const onDeleteRsvpFailure = function () {

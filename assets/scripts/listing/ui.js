@@ -21,7 +21,7 @@ const failureMessage = function (newText) {
 const onCreateListingSuccess = function (data) {
   // console.log(data)
   store.listing = data.listing
-  successMessage('Yay, onCreateListing worked! ' + data.listing.listing_name)
+  successMessage('Can\'t wait for ' + data.listing.listing_name + '!')
   $('form').trigger('reset')
 }
 
@@ -44,7 +44,7 @@ const onShowListingFailure = function () {
 }
 
 const onUpdateSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   successMessage('Your listing has been updated!')
 }
 
@@ -58,6 +58,7 @@ const onUpdateFailure = function () {
 // }
 
 const onGetListingsSuccess = (data) => {
+  successMessage('Be sure to sign-up to RSVP!')
   $('#find-listing').hide()
   // console.log(‘get data is ‘, data)
   const showListingsHTML = showListings({listings: data.listings})
@@ -70,6 +71,7 @@ const onGetListingsFailure = function () {
 }
 
 const onGetAuthListingsSuccess = (data) => {
+  successMessage('Check out what\'s happening!')
   $('#find-user-listing').hide()
   // console.log(‘get data is ‘, data)
   const showAuthListingsHTML = showAuthListings({listings: data.listings})
@@ -83,7 +85,7 @@ const onGetAuthListingsFailure = function () {
 
 const onGetUserListingsSuccess = (data) => {
   console.log(data)
-  successMessage('Here are your listings!')
+  successMessage('Your listings!')
   const showListingsHTML = showListings({listings: data.listings})
   $(`.listing-index`).html(showListingsHTML)
 }
@@ -93,7 +95,7 @@ const onGetUserListingsFailure = function () {
 }
 
 const onDeleteListingSuccess = function () {
-  successMessage('Your quote with Id: ' + store.listing_id + ' was destroyed.')
+  successMessage('Listing with id: ' + store.listing_id + ' was destroyed.')
 }
 
 const onDeleteListingFailure = function () {

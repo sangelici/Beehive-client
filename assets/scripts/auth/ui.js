@@ -7,7 +7,7 @@ const successMessage = function (newText) {
   $('.message').removeClass('failure')
   $('.message').addClass('success')
   // $('form').trigger('reset')
-  // setTimeout(function () { successMessage('') }, 4000)
+  // setTimeout(function () { successMessage('') }, 8000)
 }
 
 const failureMessage = function (newText) {
@@ -62,6 +62,7 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = function () {
   successMessage(`Goodbye! Come back soon!`)
   landing()
+  $('.listing-index').show()
   $('.listing-index').html('')
   $('#find-listing').show()
   $('#find-user-listing').hide()
