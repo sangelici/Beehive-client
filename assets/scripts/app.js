@@ -76,10 +76,24 @@ $(() => {
   // SHOW LISTING
   $('.work').on('click', '.show-event', listingEvents.onShowListing)
   // $('#show-listing').on('submit', listingEvents.onShowListing)
-  $('#update-listing').on('submit', listingEvents.onUpdateListing)
-  $('#delete-listing').on('submit', listingEvents.onDeleteListing)
+  // $('#update-listing').on('submit', listingEvents.onUpdateListing)
+  // $('#delete-listing').on('submit', listingEvents.onDeleteListing)
 
-  $('.create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
+  // UPDATE/DELETE LISTING
+  // Buttons appear on handlebars template - show-user-listing.handlebars
+  $('.work').on('submit', '#update-listing', listingEvents.onUpdateListing)
+  $('.work').on('submit', '#delete-listing', listingEvents.onDeleteListing)
+
+  // On click link inside handlebars template - user-listings.handlebars
+  $('.work').on('click', '.show-user-event', listingEvents.onShowUserListing)
+
+  // Show listing/event to Rsvp to - signed-in-listings.handlebars
+  $('.work').on('click', '.show-event', listingEvents.onShowListing)
+
+  // CREATE RSVP
+  // Button appears on handlebars template - show-listing-handlebars
+  $('.work').on('submit', '.create-rsvp', rsvpEvents.onCreateRsvp)
+  // $('.create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
   // $('.work2').on('click', '.create-rsvp', rsvpEvents.onCreateRsvp)
   $('#delete-rsvp').on('submit', rsvpEvents.onDeleteRsvp)
 
