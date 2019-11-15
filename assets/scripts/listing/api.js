@@ -24,7 +24,17 @@ const showListing = function (id) {
   })
 }
 
-const updateListing = function (name, location, description, id) {
+const showUserListing = function (id) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + `/listings/${id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateListing = function (name, location, date, start_time, end_time, description, id) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/listings/${id}`,
@@ -35,6 +45,9 @@ const updateListing = function (name, location, description, id) {
       'listing': {
         'listing_name': name,
         'location': location,
+        'date': date,
+        'start_time': start_time,
+        'end_time': end_time,
         'description': description
       }
     }
@@ -51,7 +64,10 @@ const getListings = function () {
 const getAuthListings = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/listings/'
+    url: config.apiUrl + '/listings/',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -82,5 +98,6 @@ module.exports = {
   getListings,
   deleteListing,
   getUserListings,
-  getAuthListings
+  getAuthListings,
+  showUserListing
 }

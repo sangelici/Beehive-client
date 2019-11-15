@@ -1,3 +1,8 @@
+<form class="create-rsvp">
+  <legend>Create rsvp</legend>
+  <input id="create-rsvp" required type="hidden" name="rsvp[listing]" value={{listing.id}} >
+<button>RSVP</button>
+</form>
 
 <div class="one-listing">
   <h4 class="event-name"> {{listing.listing_name}} </h4>
@@ -7,5 +12,4 @@
   <p> Start Time - {{listing.start_time}} </p>
   <p> End Time - {{listing.end_time}} </p>
   <p> Description - {{listing.description}} </p>
-  <p> *Event ID - {{listing.id}} </p>
 </div>

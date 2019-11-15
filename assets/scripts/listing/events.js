@@ -23,13 +23,25 @@ const onShowListing = function (event) {
     .catch(ui.onShowListingFailure)
 }
 
+const onShowUserListing = function (event) {
+  event.preventDefault()
+  // const id = $('#find-listing').val()
+  const eventId = $(event.target).attr('data-id')
+  api.showUserListing(eventId)
+    .then(ui.onShowUserListingSuccess)
+    .catch(ui.onShowUserListingFailure)
+}
+
 const onUpdateListing = function (event) {
   event.preventDefault()
   const name = $('#listing-name').val()
   const location = $('#listing-location').val()
+  const date = $('#listing-date').val()
+  const start_time = $('#listing-start_time').val()
+  const end_time = $('#listing-end_time').val()
   const description = $('#listing-description').val()
   const id = $('#listing-id').val()
-  api.updateListing(name, location, description, id)
+  api.updateListing(name, location, date, start_time, end_time, description, id)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
 }
@@ -71,5 +83,6 @@ module.exports = {
   onGetListings,
   onDeleteListing,
   onGetUserListings,
-  onGetAuthListings
+  onGetAuthListings,
+  onShowUserListing
 }
