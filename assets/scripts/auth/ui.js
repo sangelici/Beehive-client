@@ -41,6 +41,7 @@ const onSignInSuccess = function (responseData) {
   $('#find-listing').hide()
   $('.post-patch-delete').show()
   $('body').css('height', '130vh')
+  $('form').trigger('reset')
 }
 
 const onSignInFailure = function () {
