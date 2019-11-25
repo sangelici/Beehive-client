@@ -16,7 +16,6 @@ const onCreateListing = function (event) {
 
 const onShowListing = function (event) {
   event.preventDefault()
-  // const id = $('#find-listing').val()
   const eventId = $(event.target).attr('data-id')
   api.showListing(eventId)
     .then(ui.onShowListingSuccess)
@@ -25,7 +24,6 @@ const onShowListing = function (event) {
 
 const onShowUserListing = function (event) {
   event.preventDefault()
-  // const id = $('#find-listing').val()
   const eventId = $(event.target).attr('data-id')
   api.showUserListing(eventId)
     .then(ui.onShowUserListingSuccess)

@@ -6,13 +6,11 @@ const oneListing = require('../templates/show-listing.handlebars')
 const oneUserListing = require('../templates/show-user-listing.handlebars')
 const showAuthListings = require('../templates/signed-in-listings.handlebars')
 const showUserListings = require('../templates/user-listings.handlebars')
-// const formatDateTime = require('../../../lib/format-date-time.js')
 
 const successMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('failure')
   $('.message').addClass('success')
-  // $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
@@ -22,12 +20,8 @@ const failureMessage = function (newText) {
 }
 
 const onCreateListingSuccess = function (data) {
-  // console.log(data)
   store.listing = data.listing
   successMessage('Can\'t wait for ' + data.listing.listing_name + '!')
-  // data.listing = formatDateTime.formatDatesForDisplay(data.listing)
-  // console.log(data.listing.date)
-  // store.listing.date = data.listing.date
   $('form').trigger('reset')
 }
 
@@ -36,14 +30,7 @@ const onCreateListingFailure = function () {
 }
 
 const onShowListingSuccess = function (data) {
-  // console.log(data.listing)
   successMessage('What a stupendous listing! ' + data.listing.listing_name)
-  // $('.listing-show').html(oneListing(event))
-  // data.listing = formatDateTime.formatDatesForDisplay(data.listing)
-  // data.listing.start_time.split(':')
-  // if (data.listing.start_time > 12) {
-  //   data.listing.start_time -= 12
-  // }
   data.listing.date = data.listing.date.split('T')[0]
   const oneListingHTML = oneListing({listing: data.listing})
   $('.listing-index').html('')
@@ -56,9 +43,7 @@ const onShowListingFailure = function () {
 }
 
 const onShowUserListingSuccess = function (data) {
-  // console.log(data.listing)
   successMessage('What a stupendous listing! ' + data.listing.listing_name)
-  // $('.listing-show').html(oneListing(event))
   data.listing.date = data.listing.date.split('T')[0]
   const oneUserListingHTML = oneUserListing({listing: data.listing})
   $('.listing-index').html('')
@@ -71,24 +56,17 @@ const onShowUserListingFailure = function () {
 }
 
 const onUpdateSuccess = function (data) {
-  // console.log(data)
   successMessage('Your listing has been updated!')
+  $('.listing-index').html('')
 }
 
 const onUpdateFailure = function () {
   failureMessage('Sorry, something went wrong. Please try again.')
 }
 
-// const onGetListingsSuccess = function (data) {
-//   console.log(data)
-//   successMessage('Here are your listings ')
-// }
-
 const onGetListingsSuccess = (data) => {
-  // console.log(data)
   successMessage('Be sure to sign-up to RSVP!')
   $('#find-listing').hide()
-  // console.log('get data is ' + data)
   const showListingsHTML = showListings({listings: data.listings})
   $('.listing-index').html('')
   $('.listing-index').html(showListingsHTML)
@@ -99,11 +77,9 @@ const onGetListingsFailure = function () {
 }
 
 const onGetAuthListingsSuccess = (data) => {
-  // console.log(data)
   store.listings = data.listings
   successMessage('Check out what\'s happening!')
   $('#find-user-listing').hide()
-  // console.log('get data is ' + store.listings)
   const showAuthListingsHTML = showAuthListings({listings: data.listings})
   $('.listing-index').html('')
   $('.listing-index').html(showAuthListingsHTML)
@@ -114,7 +90,6 @@ const onGetAuthListingsFailure = function () {
 }
 
 const onGetUserListingsSuccess = (data) => {
-  // console.log(data)
   successMessage('Your listings!')
   const showUserListingsHTML = showUserListings({listings: data.listings})
   $('.listing-index').html(showUserListingsHTML)
@@ -125,7 +100,8 @@ const onGetUserListingsFailure = function () {
 }
 
 const onDeleteListingSuccess = function () {
-  successMessage('Listing with id: ' + store.listing_id + ' was destroyed.')
+  successMessage('Your event has been destroyed.')
+  $('.listing-index').html('')
 }
 
 const onDeleteListingFailure = function () {

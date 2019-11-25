@@ -71,13 +71,11 @@ $(() => {
     $('#find-listing').hide()
     $('#find-user-listing').hide()
     $('.one-listing').hide()
+    $('.listing-index').html('')
   })
 
   // SHOW LISTING
   $('.work').on('click', '.show-event', listingEvents.onShowListing)
-  // $('#show-listing').on('submit', listingEvents.onShowListing)
-  // $('#update-listing').on('submit', listingEvents.onUpdateListing)
-  // $('#delete-listing').on('submit', listingEvents.onDeleteListing)
 
   // UPDATE/DELETE LISTING
   // Buttons appear on handlebars template - show-user-listing.handlebars
@@ -93,8 +91,6 @@ $(() => {
   // CREATE RSVP
   // Button appears on handlebars template - show-listing-handlebars
   $('.work').on('submit', '.create-rsvp', rsvpEvents.onCreateRsvp)
-  // $('.create-rsvp').on('submit', rsvpEvents.onCreateRsvp)
-  // $('.work2').on('click', '.create-rsvp', rsvpEvents.onCreateRsvp)
   $('#delete-rsvp').on('submit', rsvpEvents.onDeleteRsvp)
 
   // REGISTER/LOGIN MODAL

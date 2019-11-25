@@ -19,10 +19,10 @@ const failureMessage = function (newText) {
 
 const onCreateRsvpSuccess = function (data) {
   store.rsvp = data.rsvp.listing
-  successMessage('You\'re now RSVP\'d to: ' + store.rsvp)
-  const oneRsvpHTML = createRsvp({listing: data.rsvp})
+  successMessage('You\'re now RSVP\'d to a great event')
+  // const oneRsvpHTML = createRsvp({listing: data.rsvp})
   $('.listing-index').html('')
-  $('.listing-index').html(oneRsvpHTML)
+  // $('.listing-index').html(oneRsvpHTML)
 }
 
 const onCreateRsvpFailure = function () {
@@ -36,13 +36,6 @@ const onIndexRsvpSuccess = function (data) {
   $('.listing-index').html('')
   $('.listing-index').html(showRsvpsHTML)
 }
-
-// const onIndexRsvpSuccess = function (data) {
-//   store.rsvps = data.rsvps
-//   console.log(store.user.email)
-//   console.log(data.rsvps)
-//   successMessage('Yay, onIndexRsvp worked! ')
-// }
 
 const onIndexRsvpFailure = function () {
   failureMessage('Sorry, something went wrong. Please try again.')
