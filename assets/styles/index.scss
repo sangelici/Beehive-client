@@ -105,6 +105,24 @@ body {
   z-index: 5;
 }
 
+.button {
+  background: #757575;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  padding: 10px 20px;
+}
+
+.button--yellow {
+  background: #ffb400;
+  color: 'white';
+}
+
+.button--white {
+  background: 'white';
+  color: 'black';
+}
+
 .form-structor {
   background-color: #ffbf49;
   border-radius: 15px;
@@ -142,7 +160,6 @@ body {
         }
       }
     }
-
   }
 
   .signup {
