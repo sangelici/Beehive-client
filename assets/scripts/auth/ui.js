@@ -40,7 +40,6 @@ const onSignInSuccess = function (responseData) {
   $('.listing-index').html('')
   $('#find-listing').hide()
   $('.post-patch-delete').show()
-  $('body').css('height', '130vh')
   $('form').trigger('reset')
 }
 
@@ -68,7 +67,6 @@ const onSignOutSuccess = function () {
   $('#find-listing').show()
   $('#find-user-listing').hide()
   $('.post-patch-delete').hide()
-  $('body').css('height', '100vh')
 }
 
 const onSignOutFailure = function () {
