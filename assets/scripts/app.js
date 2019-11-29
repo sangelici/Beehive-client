@@ -104,7 +104,6 @@ $(() => {
     $('#sign-up').show()
   })
 
-  // $('.listing-index').html('')
   $('.listing-index').show()
 
   // HIDING
