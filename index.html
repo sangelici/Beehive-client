@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Beehive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="main-header">
+          BEEHIVE
+          <img src='./public/logo.png' alt="Honey Comb"/>
+        </h1>
+        <p class="catchphrase">Discover what the buzz is all about!</p>
+        <div class="catchphrase message"></div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-structor">
+          <div class="landing">
+            <div class='sign-up signup'>
+              <h2 class="form-title1" id="signup">Sign up</h2>
+              <form class="form-holder" id='sign-up'>
+                <!-- <legend>Sign-up</legend> -->
+                <input type="email" name="credentials[email]" placeholder='Email'>
+                <input type="password" name="credentials[password]" placeholder='Password'>
+                <input type="password" name="credentials[password_confirmation]" placeholder='Confirm Password'>
+                <button class="submit-btn">Sign up</button>
+              </form>
+              <br>
+              <button class="show-login button button--white">Log In!</button>
+            </div>
+
+            <div class="sign-in login">
+              <div class="center">
+                <h2 class="form-title2" id="login">Log in</h2>
+                <form class="form-holder" id="sign-in">
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <button class="submit-btn">Log in</button>
+                </form>
+                <br>
+                <button class="show-signup button button--yellow">Sign up!</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav">
+            <ul class="links">
+              <li><img src="./public/beehive.png" alt="Bee Hive" class="route-home"/></li>
+              <li><button class="link profile">Profile</button></li>
+              <li><button class="link find-listing">Find Event</button></li>
+              <li><button class="link create-listing">Create Event</button></li>
+              <li><button class="link change-pw">Change Password</button></li>
+              <li>
+                <div class="sign-out">
+                  <form id="sign-out">
+                    <button class="link">Sign Out</button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 public-listings">
+
+        <div id="find-listing">
+          <div class="index">
+            <form id="index">
+              <legend>Events</legend>
+              <button class="button button--yellow">Show all</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="find-user-listing">
+          <div class="index">
+            <form id="index-auth">
+              <legend>All Events</legend>
+              <button class="button button--yellow">Show</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="homepage">
+          <div id="profile">
+            <div class="user-index">
+              <form id="user-index">
+                <legend>My Events</legend>
+                <button class="button button--yellow">Show All</button>
+              </form>
+            </div>
+
+            <div class="rsvp-index">
+              <form id="rsvp-index">
+                <legend>My RSVPs</legend>
+                <button class="button button--yellow">Show All</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="create-listing">
+            <div class="new-listing">
+              <form class="form-style" id="new-listing">
+                <legend>Create Listing</legend>
+                <input required type="text" name="listing[listing_name]" placeholder="Event Name">
+                <input required type="text" name="listing[location]" placeholder="Location">
+                <input required type="date" name="listing[date]" placeholder="Date">
+                <input type="time" name="listing[start_time]" placeholder="Start Time">
+                <input type="time" name="listing[end_time]" placeholder="End Time">
+                <input required type="text" name="listing[description]" placeholder="Description">
+                <button class="button button--yellow">CREATE!</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="change-pw">
+            <div class="change-password">
+              <form class="form-style" id="change-password">
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" placeholder='Enter old password'>
+                <input type="password" name="passwords[new]" placeholder='Enter new password'>
+                <button class="button button--yellow">Change Password</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="work work2 listing-index overflow-auto"></div>
+        <div class="listing-show"></div>
+
+      </div> <!-- COL 8 -->
+    </div> <!-- class row -->
+  </div> <!-- class container-->
+
+</body>
+
+</html>
