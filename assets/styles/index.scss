@@ -1,6 +1,39 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+body {
+  align-items: center;
+  background-color: #fff;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  width: 1250px;
+}
+
+button {
+  &.button {
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  &.button--red {
+    background: #FF6226;
+    color: #fff;
+  }
+
+  &.button--yellow {
+    background: #ffb400;
+  }
+
+  &.button--white {
+    background: 'white';
+    color: #000;
+  }
+}
+
 div {
   & .public-listings {
     display: inline-block;
@@ -50,75 +83,8 @@ html {
   justify-content: center;
 }
 
-body {
-  align-items: center;
-  background-color: #fff;
-  display: inline-block;
-  font-family: Helvetica, Arial, sans-serif;
-  height: 100vh;
-  justify-content: center;
-  width: 1250px;
-}
-
 .container {
   width: 100%;
-}
-
-.listing-index {
-  height: 470px;
-  margin-top: 10px;
-  padding: 20px;
-}
-
-.index {
-  padding: 10px;
-}
-
-#profile {
-  display: inline-flex;
-  padding: 10px;
-
-  & .user-index,
-  .rsvp-index {
-      margin: 0 35px;
-    }
-}
-
-// .rsvp-index {
-//   height: 500px;
-//   padding: 5px;
-//   width: 500px;
-// }
-
-.message {
-  color: #FF6226;
-}
-
-.show-login,
-.show-signup {
-  left: 50%;
-  margin-top: 20px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 65%;
-  z-index: 5;
-}
-
-.button {
-  border-radius: 3px;
-  display: inline-block;
-  font-size: 13px;
-  padding: 10px 20px;
-}
-
-.button--yellow {
-  background: #ffb400;
-  color: 'white';
-}
-
-.button--white {
-  background: 'white';
-  color: 'black';
 }
 
 .form-structor {
@@ -317,4 +283,42 @@ body {
       }
     }
   }
+}
+
+.form-style {
+  display: inline-grid;
+}
+
+.index {
+  padding: 10px;
+}
+
+.listing-index {
+  height: 470px;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.message {
+  color: #FF6226;
+}
+
+.show-login,
+.show-signup {
+  left: 50%;
+  margin-top: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+}
+
+#profile {
+  display: inline-flex;
+  padding: 10px;
+
+  & .user-index,
+  .rsvp-index {
+      margin: 0 35px;
+    }
 }

@@ -5,19 +5,19 @@
   <p> Location - {{listing.location}} </p>
   <p> Start Time - {{listing.start_time}} </p>
   <p> End Time - {{listing.end_time}} </p>
-  <p> Description - {{listing.description}} </p>
+  <p> {{listing.description}} </p>
 </div>
 
 <div class="list-group-item">
-  <form id="update-listing">
+  <form class="form-style" id="update-listing">
     <legend>Update Listing</legend>
     <input required id="listing-id" type="hidden" name="listing[id]" value={{listing.id}}>
-    <input id="listing-name" type="text" name="listing[listing_name]" value={{listing.listing_name}}>
-    <input id="listing-location" type="text" name="listing[location]" value={{listing.location}}>
+    <input id="listing-name" type="text" name="listing[listing_name]" value="{{listing.listing_name}}">
+    <input id="listing-location" type="text" name="listing[location]" value="{{listing.location}}">
     <input id="listing-date" type="date" name="listing[date]" value={{listing.date}}>
     <input id="listing-start_time" type="time" name="listing[start_time]" value={{listing.start_time}}>
     <input id="listing-end_time" type="time" name="listing[end_time]" value={{listing.end_time}}>
-    <input id="listing-description" type="text" name="listing[description]" value={{listing.description}}>
+    <input id="listing-description" type="text" value="{{listing.description}}">
     <button class="button button--yellow">Update Listing</button>
   </form>
 </div>
@@ -26,6 +26,6 @@
   <form id="delete-listing list-group-item">
     <legend>Remove Listing?</legend>
     <input id="destroy-listing" required type="hidden" name="listing[id]" value={{listing.id}}>
-    <button class="button button--yellow">Delete</button>
+    <button class="button button--red">Delete</button>
   </form>
 </div>
