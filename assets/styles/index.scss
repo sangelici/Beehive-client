@@ -287,6 +287,14 @@ html {
 
 .form-style {
   display: inline-grid;
+  width: 25vw;
+
+  & input {
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+
+  }
 }
 
 .index {
