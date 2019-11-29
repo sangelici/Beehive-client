@@ -35,27 +35,6 @@ button {
 }
 
 div {
-  & .public-listings {
-    display: inline-block;
-    font-family: Helvetica, Arial, sans-serif;
-    justify-content: flex-start;
-    text-align: center;
-  }
-
-  & .post-patch-delete {
-    background-color: #bbb;
-    display: flex;
-    padding: 10px 50px;
-
-    & #delete-listing {
-      margin-left: -40px;
-    }
-
-    & .delete-listing,
-    .create-rsvp {
-      margin: 0 40px;
-    }
-  }
 
   & .catchphrase {
     font-size: 18px;
@@ -67,13 +46,34 @@ div {
     font-family: 'Montserrat', sans-serif;
     font-size: 75px;
     font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  & .post-patch-delete {
+    background-color: #bbb;
+    display: flex;
+    padding: 10px 50px;
+
+    // & #delete-listing {
+    //   margin-left: -40px;
+    // }
+
+    & .delete-listing,
+    .create-rsvp {
+      margin: 0 40px;
+    }
+  }
+
+  & .public-listings {
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    justify-content: flex-start;
     text-align: center;
   }
 }
 
-h1 {
-  margin: 0;
-}
+
 
 html {
   align-items: center;
