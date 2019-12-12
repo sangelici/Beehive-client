@@ -1,6 +1,10 @@
 # Beehive
 This is a single page applicaton that allows the user to view. In addition, the user can RSVP to events, view all events created by other user, view events they've RSVPed to, and edit or delete events they've created.
 
+*** When demoing the application, please do not use a real email or password when registering ***
+
+ex: email: bee@hive, password: bee
+
 ## Important Links
   - [Deployed Web Apllication](https://ga-zero-to-hero.github.io/beehive-client/)
   - [Deployed back end API](https://vast-depths-99590.herokuapp.com/)
